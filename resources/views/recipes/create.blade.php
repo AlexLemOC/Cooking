@@ -5,6 +5,11 @@
         </h2>
     </x-slot>
 
+    {{-- @php
+        $recipe = App\Models\Recipe::latest()->first();
+        $recipe->ingredients->map(fn ($ingredient) => dump($ingredient->pivot->amount));
+    @endphp --}}
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="mb-5">Créer votre nouvelle recette !</div>
